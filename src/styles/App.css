@@ -36,6 +36,9 @@ body {
   width: 100%;
   height: 50px;
   background-color: var(--main-black);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-container {
@@ -61,4 +64,36 @@ body {
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15),
     inset 0px 4px 8px rgba(0, 0, 0, 0.15),
     inset 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.main {
+  height: calc(100vh - 50px);
+  margin-top: 50px;
+}
+
+.calculator-container {
+  height: 100%;
+  width: 800px;
+  margin: 0 auto;
+  padding: 12px;
+  display: grid;
+  column-gap: 4px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.calculator {
+  border: 1px solid red;
+}
+
+.calculator-screen {
+  border: 1px solid red;
+}
+
+.history {
+  border: 1px solid red;
+}
+
+.footer {
+  height: 60px;
+  background-color: var(--main-black);
 }
