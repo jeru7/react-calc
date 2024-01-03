@@ -3,13 +3,11 @@ import "../styles/App.css";
 
 const Header = () => {
   return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <button className="darkToggler"></button>
-        </div>
-      </nav>
-    </>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <button className="darkToggler"></button>
+      </div>
+    </nav>
   );
 };
 
