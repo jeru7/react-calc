@@ -46,6 +46,7 @@ body {
 
 .navbar-container {
   width: 800px;
+  padding-right: 12px;
   text-align: right;
 }
 
@@ -102,14 +103,19 @@ body {
   background-color: var(--main-black);
   border-radius: 8px;
   width: 100%;
+  overflow-x: auto;
 }
 
 .previous-result {
-  height: 100%;
+  height: 20px;
+  opacity: 0.5;
 }
 
 .current-result {
+  height: 60px;
+  width: 100%;
   font-size: 40px;
+  overflow-x: auto;
 }
 
 .calculator-controls {
@@ -158,6 +164,7 @@ body {
   padding: 16px;
   border-radius: 12px;
   background-color: var(--fourth-black);
+  overflow: auto;
 }
 
 .history-container {
@@ -166,6 +173,7 @@ body {
   height: 100%;
   gap: 8px;
   border-radius: 8px;
+  overflow: auto;
 }
 
 .history-header {
@@ -195,6 +203,26 @@ body {
 .history-display {
   background-color: var(--main-black);
   border-radius: 8px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.history-item {
+  text-align: right;
+  overflow: auto;
+  direction: rtl;
+}
+
+.history-prev {
+  font-size: 16px;
+  margin: 0 auto;
+  opacity: 0.5;
+  text-align: right;
+  direction: ltr;
+}
+
+.history-current {
+  font-size: 32px;
 }
 
 .footer {
