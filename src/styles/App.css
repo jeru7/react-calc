@@ -4,6 +4,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -119,13 +121,15 @@ body {
     rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
 }
 
-.buttons:hover {
+.buttons:hover,
+.history-delete:hover {
   background-color: var(--text-color);
   color: var(--main-black);
   cursor: pointer;
 }
 
-.buttons:active {
+.buttons:active,
+.history-delete:active {
   box-shadow: rgb(86, 87, 88) 3px 3px 6px 0px inset,
     rgba(50, 50, 50, 0.5) -3px -3px 6px 1px inset;
 }
@@ -139,7 +143,46 @@ body {
 }
 
 .history {
-  border: 1px solid red;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--fourth-black);
+}
+
+.history-container {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  height: 100%;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.history-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 8px;
+  background-color: var(--main-black);
+  border-radius: 8px;
+}
+
+.history-header h2 {
+  font-size: 24px;
+}
+
+.history-delete {
+  width: 100%;
+  background-color: var(--third-black);
+  padding: 2px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: rgba(107, 108, 109, 0.3) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
+}
+
+.history-display {
+  background-color: var(--main-black);
+  border-radius: 8px;
 }
 
 .footer {
