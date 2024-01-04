@@ -27,7 +27,7 @@ const Calculator = () => {
             <button className="buttons">2</button>
             <button className="buttons">3</button>
             <button className="buttons equal">=</button>
-            <button className="buttons">0</button>
+            <button className="buttons button-0">0</button>
             <button className="buttons dot">.</button>
           </div>
         </div>
