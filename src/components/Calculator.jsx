@@ -4,7 +4,7 @@ import { useState } from "react";
 import "../styles/App.css";
 import * as math from "mathjs";
 
-const Calculator = () => {
+const Calculator = ({ isLightMode }) => {
   const [prevResult, setPrevResult] = useState("");
   const [currentResult, setCurrentResult] = useState("");
   const [history, setHistory] = useState([]);
@@ -51,123 +51,131 @@ const Calculator = () => {
   return (
     <main className="main">
       <div className="calculator-container">
-        <div className="calculator">
-          <div className="calculator-screen">
+        <div className={`calculator ${isLightMode ? "light-mode" : ""}`}>
+          <div
+            className={`calculator-screen ${isLightMode ? "light-mode" : ""}`}
+          >
             <div className="previous-result">{prevResult}</div>
             <div className="current-result">{currentResult}</div>
           </div>
-          <div className="calculator-controls">
+          <div
+            className={`calculator-controls ${isLightMode ? "light-mode" : ""}`}
+          >
             <button
-              className="buttons clear"
+              className={`buttons clear ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               C
             </button>
             <button
-              className="buttons delete"
+              className={`buttons delete ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               DEL
             </button>
             <button
-              className="buttons operations"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               /
             </button>
             <button
-              className="buttons operations"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               *
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               7
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               8
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               9
             </button>
             <button
-              className="buttons operations"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               -
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               4
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               5
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               6
             </button>
             <button
-              className="buttons operations"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               +
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               1
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               2
             </button>
             <button
-              className="buttons"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               3
             </button>
             <button
-              className="buttons equal"
+              className={`buttons equal ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               =
             </button>
             <button
-              className="buttons button-0"
+              className={`buttons button-0 ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               0
             </button>
             <button
-              className="buttons dot"
+              className={`buttons ${isLightMode ? "light-mode" : ""}`}
               onClick={(e) => buttonClicked(e.target.innerText)}
             >
               .
             </button>
           </div>
         </div>
-        <History history={history} setHistory={setHistory} />
+        <History
+          history={history}
+          setHistory={setHistory}
+          isLightMode={isLightMode}
+        />
       </div>
     </main>
   );

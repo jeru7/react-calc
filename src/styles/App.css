@@ -42,6 +42,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 1000;
+  box-shadow: 0px 1px 4px -2px rgba(0, 0, 0, 0.93);
 }
 
 .navbar-container {
@@ -256,6 +257,60 @@ body {
 
 .footer-icons a i:hover {
   transform: scale(1.1);
+}
+
+/* Light mode */
+/* 
+--main-white: #f8f8ff;
+--secondary-white: #f2f3f4;
+--third-white: #f5f5f5;
+--fourth-white: #fffafa;
+--light-mode-text: #1b1b1b; 
+*/
+
+body.light-mode {
+  background-color: var(--secondary-white);
+}
+
+.navbar.light-mode,
+.footer.light-mode {
+  background-color: var(--main-white);
+}
+
+.darkToggler.light-mode {
+  background-color: var(--third-white);
+  border-color: var(--main-white);
+  box-shadow: rgba(107, 108, 109, 0.3) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
+}
+
+.calculator.light-mode,
+.history.light-mode {
+  background-color: var(--secondary-white);
+  box-shadow: rgba(107, 108, 109, 0.3) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
+}
+
+.calculator-screen.light-mode,
+.history-display.light-mode {
+  background-color: rgba(163, 158, 158, 0.356);
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  color: var(--light-mode-text);
+}
+
+.calculator-controls.light-mode {
+  background-color: var(--fourth-white);
+  box-shadow: rgba(97, 91, 91, 0.06) 0px 2px 4px 0px inset;
+}
+
+.history-header.light-mode {
+  background-color: rgba(163, 158, 158, 0.356);
+  box-shadow: rgba(97, 91, 91, 0.06) 0px 2px 4px 0px inset;
+}
+
+.buttons.light-mode,
+.history-delete.light-mode {
+  background-color: var(--secondary-white);
 }
 
 /* Responsive */
