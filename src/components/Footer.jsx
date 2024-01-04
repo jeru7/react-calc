@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-name">
-          <p className="name">Developed by: jeru7</p>
+          <p className="name">Developed by: jeru</p>
         </div>
       </div>
     </footer>
