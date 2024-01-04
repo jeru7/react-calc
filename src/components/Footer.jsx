@@ -7,14 +7,14 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-icons">
           <a href="https://github.com/jeru7" target="_blank" rel="noreferrer">
-            <i class="fa-brands fa-github icons"></i>
+            <i className="fa-brands fa-github icons"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/jeru7/"
             target="_blank"
             rel="noreferrer"
           >
-            <i class="fa-brands fa-linkedin-in icons"></i>
+            <i className="fa-brands fa-linkedin-in icons"></i>
           </a>
         </div>
         <div className="footer-name">
