@@ -35,7 +35,9 @@ const Calculator = () => {
           <div className="history-container">
             <div className="history-header">
               <h2>History</h2>
-              <p>DELETE</p>
+              <div className="history-delete">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </div>
             </div>
             <div className="history-display"></div>
           </div>
