@@ -2,6 +2,10 @@
 
 A simple calculator app built with React, converted from a vanilla JavaScript project.
 
+## Live Site
+
+[Visit site](https://jeru7.github.io/react-calc/)
+
 ## Features
 
 - Basic arithmetic operations: addition, subtraction, multiplication, and division.
@@ -9,3 +13,4 @@ A simple calculator app built with React, converted from a vanilla JavaScript pr
 - Clear button for resetting input.
 - History panel
 - Clear History
+- Dark/Light Mode
