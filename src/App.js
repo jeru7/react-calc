@@ -8,6 +8,9 @@ function App() {
   const [isLightMode, setIsLightMode] = useState(false);
 
   useEffect(() => {
+    document.title = "Calculator - React App";
+  }, []);
+  useEffect(() => {
     document.body.classList.toggle("light-mode", isLightMode);
 
     return () => {
